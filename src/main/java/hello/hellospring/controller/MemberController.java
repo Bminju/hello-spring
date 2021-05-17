@@ -9,6 +9,11 @@ public class MemberController {
 
     private MemberService memberService;
 
+    @Autowired
+    public void setMemberService(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
     // 생성자 Alt + insert
     @Autowired  // controller와 service 연결
     public MemberController(MemberService memberService) {
